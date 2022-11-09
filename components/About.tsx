@@ -22,7 +22,7 @@ function About({}: Props) {
         }}
         whileInView={{ x: 0 }}
         viewport={{ once: true}}
-        // src="https://drive.google.com/file/d/1Vq_JykcePDS3FnskCjnkMP1mJR4Orag5/view?usp=share_link"
+        src="https://imgur.com/VWKMUyY"
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
         />
 
