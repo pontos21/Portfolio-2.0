@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
     <motion.div 
     initial={{ opacity: 0 }}
@@ -22,14 +26,14 @@ function About({}: Props) {
         }}
         whileInView={{ x: 0 }}
         viewport={{ once: true}}
-        src="https://imgur.com/VWKMUyY"
+        src={urlFor(pageInfo?.profilePic).url()}
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
         />
 
         <div className='space-y-10 px-0 md:px-10'>
             <h4 className='text-4xl font-semibold'>Here is a <span className='underline decoration-[#F7AB0A]/50'>little</span> background
             </h4>
-            <p className='text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam esse sit, earum ut enim qui corporis voluptate totam sed aut nulla aspernatur consequuntur aliquid veritatis eaque maxime exercitationem dignissimos.</p>
+            <p className='text-base'>{pageInfo?.backgroundInformation}</p>
         </div>
     </motion.div>
   )
